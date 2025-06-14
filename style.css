@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: Rubik;
-    font-size: 18px;
+      font-size: clamp(1rem, 2vw, 2rem);    
     color: #333;
     padding: 2rem;
     overflow-x: hidden;
@@ -53,7 +53,6 @@ body {
         border-bottom: 2px solid rgba(198, 183, 235, 0.3);
         text-decoration: none;
         padding: 1rem 0rem;
-        font-size: .8rem;
         
     }
     .links {
@@ -151,9 +150,7 @@ body {
     z-index: -1;
   }
   
-  .hero h1 {
-    font-size: 2rem;
-  }
+  
   
   .cta-buttons {
     margin: 1rem 0;
@@ -161,7 +158,6 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-    font-size: 0.8rem;
   }
   .btn-primary {
     background-color: hsl(231, 69%, 60%);
@@ -205,7 +201,6 @@ body {
     border-bottom: 2px solid rgba(198, 183, 235, 0.3);
     text-decoration: none;
     padding: 1rem 0rem;
-    font-size: 0.8rem;
     opacity: 0.5;
     transition: opacity 0.5s;
     cursor: pointer;
@@ -315,18 +310,20 @@ body {
   .browsers {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
   }
   
   .browser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
     border-radius: 10px;
     margin-top: 3rem;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 2rem;
     
   }
+  
   .btn-download {
     background-color: hsl(231, 69%, 60%);
     border: none;
@@ -336,6 +333,7 @@ body {
     text-decoration: none;
     display: inline-block;
     margin-top: 1rem;
+    font-size: clamp(0.5rem, 2vw, 1rem);
   }
   
   .accordion .faq-item {
@@ -455,19 +453,13 @@ body {
   /* Desktop styles */
 @media (min-width: 768px) {
 
-  body {
-    padding: 2rem 6rem; /* Increased padding for larger screens */
-  }
-
-  .navbar {
-    padding: 1rem 6rem; /* Increased padding for larger screens */
-  }
-
+ 
   .nav-menu {
     display: flex ;
     flex-direction: row;
     position: relative;
     justify-content: space-between;
+    
     border: none;
     flex-direction: row;
     background: transparent;
@@ -485,7 +477,6 @@ body {
     color: black;
     border: none;
     padding: 0;
-    font-size: 1rem;
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -544,7 +535,6 @@ body {
     text-align: left;
   }
   .hero-text h1 {
-    font-size: 3rem;
     margin-bottom: 1rem;
     margin-top: 0;
     padding-top: 0;
@@ -555,7 +545,6 @@ body {
     justify-content: left;
     gap: 2rem;
     margin-top: 1rem;
-    font-size: 2rem;
   }
   .btn-primary:hover {
     background-color: transparent;
@@ -575,7 +564,7 @@ body {
   .btn-secondary {
     transition: all 0.5s ease-in-out;
   }
-  .features h2, .features p {
+  .features1 {
     margin: 0 auto;
     max-width: 600px; /* Adjust the width as needed */
     text-align: center;
@@ -600,20 +589,15 @@ body {
     align-self: center;
     text-align: center;
   }
-  .tabs a {
-    font-size: 1.5rem;
-  }
+
   .tabs a:hover{
     color: hsl(0, 94%, 66%);
   }
 
   .feature-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    text-align: left;
-    padding: 4rem 6rem;
+    padding: 0rem 2rem;
+    padding-top: 0px;
     overflow: hidden;
   }
   .feature-description h2 p {
@@ -624,12 +608,13 @@ body {
     line-height: 2rem;
   }
   .feature-description {
+    width: 100%;
+    flex: 1;
+    justify-content: center;
     display: none;
-    text-align: left;
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
     transform: translateX(50px);
-    margin-top: 2rem;
   }
 
   .feature-description.active {
@@ -642,8 +627,10 @@ body {
   .herorect {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 45%;
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
+    align-items: center;
+    justify-content: space-between;
     text-align: left;
   }
   .heroerect1 {
@@ -736,9 +723,7 @@ body {
   }
   .faq {
     margin-top: 10rem;
-    width: 50%;
-    left: 50%;
-    transform: translateX(50%);
+    width: 100%;
   }
   .subscribe {
     flex-direction: row;
@@ -786,7 +771,6 @@ body {
     left: 0;
     right: 0;
     justify-content: center;
-    margin-top: 1rem;
   }
 }
 
