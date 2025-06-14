@@ -37,14 +37,16 @@ body {
     right: 0;
     background: hsla(229, 31%, 21%, 0.96);
     color: white;
+    display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 999;
-    transition: all 0.3s ease;
     padding: 2rem;
   }
 
     .nav-menu a {
+      display: flex;
+      flex-direction: column;
         color: white;
         width: 100%;
         text-align: center;
@@ -54,6 +56,13 @@ body {
         font-size: .8rem;
         
     }
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
 
     .nav-menu-first {
         top: 0;
@@ -62,7 +71,7 @@ body {
         width: 100%;
         align-items: center;
         border-bottom: 2px solid rgba(198, 183, 235, 0.3);
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
     .logo-bookmark {
         filter: invert(100%) hue-rotate(180deg) brightness(1) ;
